@@ -2,21 +2,20 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  height: 100vh;
   align-items: center;
+  height: 100vh;
   background: url("./images/ripple_effect.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .btn {
   background-color: #fff;
-  padding: 20px 40px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgb(137, 181, 46);
+  padding: 30px 50px;
+  font-size: 30px;
+  box-shadow: 10px 10px 5px 0px rgba(137, 181, 46, 0.68);
   text-decoration: none;
   color: #000;
-  font-size: 30px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -29,17 +28,17 @@ body {
 .btn::before {
   content: "";
   position: absolute;
-  background-color: orangered;
+  background-color: rgb(213, 243, 155);
   width: 0;
   height: 0;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 50%;
+  left: var(--xPos);
+  top: var(--yPos);
+  transform: translate(-50%, -50%);
   transition: width 0.5s, height 0.5s;
 }
 
-.btn:hover::before {
-  width: 300px;
-  height: 300px;
+.btn:hover:before {
+  width: 400px;
+  height: 400px;
 }
